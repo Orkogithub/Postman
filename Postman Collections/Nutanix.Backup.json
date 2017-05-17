@@ -150,32 +150,6 @@
             "description": "Delete VM"
           },
           "response": []
-        },
-        {
-          "_postman_id": "fc343453-e943-6a8e-59dc-168f961b1259",
-          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
-          "request": {
-            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"description\": \"CentOS\",\n    \"guest_os\": \"CentOS\",\n    \"memory_mb\": 4096,\n    \"name\": \"DevOps\",\n    \"num_cores_per_ vcpu\": 2,\n    \"num_vcpus\": 1,\n    \"vm_disks\": [{\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 0\n        },\n        \"is_cdrom\": false,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"fa4ea6fd-4b44-488a-8c5a-7eb320518b50\"\n            }\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"scsi\",\n            \"device_index\": 0\n        },\n        \"vm_disk_create\": {\n            \"storage_container_uuid\": \"abd27f49-1054-41ab-8d62-b216c0c0730d\",\n            \"size\": 10737418240\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 1\n        },\n        \"is_ cdrom\": true,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"faa349dc-f7a3-4132-8689-fa6b41f4f33d\"\n            }\n        }\n    }],\n    \" hypervisor_type\": \"ACROPOLIS\",\n    \"affinity\": null\n}"
-            },
-            "description": "Create VM"
-          },
-          "response": []
         }
       ]
     },
@@ -208,7 +182,34 @@
       "_postman_id": "2758a341-e563-3742-7f34-c50032ae980d",
       "name": "VM Delpoy",
       "description": "Delpoy from Image",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "fc343453-e943-6a8e-59dc-168f961b1259",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"CentOS\",\n    \"guest_os\": \"CentOS\",\n    \"memory_mb\": 4096,\n    \"name\": \"DevOps\",\n    \"num_cores_per_ vcpu\": 2,\n    \"num_vcpus\": 1,\n    \"vm_disks\": [{\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 0\n        },\n        \"is_cdrom\": false,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"fa4ea6fd-4b44-488a-8c5a-7eb320518b50\"\n            }\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"scsi\",\n            \"device_index\": 0\n        },\n        \"vm_disk_create\": {\n            \"storage_container_uuid\": \"abd27f49-1054-41ab-8d62-b216c0c0730d\",\n            \"size\": 10737418240\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 1\n        },\n        \"is_ cdrom\": true,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"faa349dc-f7a3-4132-8689-fa6b41f4f33d\"\n            }\n        }\n    }],\n    \" hypervisor_type\": \"ACROPOLIS\",\n    \"affinity\": null\n}"
+            },
+            "description": "Create VM"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "43bc8b8f-8f1c-d4a1-2450-6efde50c6585",
