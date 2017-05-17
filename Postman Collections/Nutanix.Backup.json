@@ -1,0 +1,208 @@
+{
+  "variables": [],
+  "info": {
+    "name": "Nutanix.Backup",
+    "_postman_id": "7cf4f2fb-85d7-9544-f580-a97e72a3cc52",
+    "description": "A Set of Nutanix V2 APIs to manage VMs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "c39a8f87-1511-0bad-2e50-4f48f96f6620",
+      "name": "V2:Images",
+      "description": "V2 REST API's For Images Resouces",
+      "item": [
+        {
+          "_postman_id": "bcd6423f-53ae-6769-d46d-7b0cde335c46",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/images/",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get Images"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "cebc9c70-493d-134d-5b60-98157997aedf",
+      "name": "V2:VMS",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "dd3b8408-5907-56ad-f7e3-796f8e0b9e3c",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get VMs"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b3ee6927-1013-4ba9-a2ea-bc465163aebd",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/efe6d011-89b0-4b88-94a7-225183077caf/set_power_state/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"description\": \"test\",\n\t\"guest_os\": \"test\",\n\t\"memory_mb\": 4096,\n\t\"name\": \"test-vm\",\n\t\"num_cores_per_ vcpu\": 2,\n\t\"num_vcpus\": 1,\n\t\"vm_disks\": [{\n\t\t\"disk_address\": {\n\t\t\t\"device_bus\": \"ide\",\n\t\t\t\"device_index\": 0\n\t\t},\n\t\t\"is_cdrom\": true,\n\t\t\"is_empty\": false,\n\t\t\"vm_disk_clone\": {\n\t\t\t\"disk_address\": {\n\t\t\t\t\"vmdisk_uuid\": \"47b55015-c34f-4523-9c56-cdbe88157ac6\"\n\t\t\t}\n\t\t}\n\t}, {\n\t\t\"disk_address\": {\n\t\t\t\"device_bus\": \"scsi\",\n\t\t\t\"device_index\": 0\n\t\t},\n\t\t\"vm_disk_create\": {\n\t\t\t\"storage_container_uuid\": \"abd27f49-1054-41ab-8d62-b216c0c0730d\",\n\t\t\t\"size\": 10737418240\n\t\t}\n\t}, {\n\t\t\"disk_address\": {\n\t\t\t\"device_bus\": \"ide\",\n\t\t\t\"device_index\": 1\n\t\t},\n\t\t\"is_ cdrom\": true,\n\t\t\"is_empty\": false,\n\t\t\"vm_disk_clone\": {\n\t\t\t\"disk_address\": {\n\t\t\t\t\"vmdisk_uuid\": \"faa349dc-f7a3-4132-8689-fa6b41f4f33d\"\n\t\t\t}\n\t\t}\n\t}],\n\t\" hypervisor_type\": \"ACROPOLIS\",\n\t\"affinity\": null\n}"
+            },
+            "description": "Create a VM"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2c326e61-f349-9059-8076-6765c06b8594",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/efe6d011-89b0-4b88-94a7-225183077caf/set_power_state/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transition\": \"ON\",\n  \"uuid\": \"efe6d011-89b0-4b88-94a7-225183077caf\"\n}"
+            },
+            "description": "Power State"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "bfabff72-c220-3507-0553-0732c67a951c",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/ copy",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/efe6d011-89b0-4b88-94a7-225183077caf/set_power_state/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transition\": \"OFF\",\n  \"uuid\": \"efe6d011-89b0-4b88-94a7-225183077caf\"\n}"
+            },
+            "description": "Power State OFF"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "875ff4f6-bd60-0b7f-c1f9-4966390f3ef2",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/efe6d011-89b0-4b88-94a7-225183077caf/",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Delete VM"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "fc343453-e943-6a8e-59dc-168f961b1259",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Tech Summit 2017\",\n    \"guest_os\": \"Windows Server 2012 R2\",\n    \"memory_mb\": 4096,\n    \"name\": \"W2K12R2\",\n    \"num_cores_per_ vcpu\": 2,\n    \"num_vcpus\": 1,\n    \"vm_disks\": [{\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 0\n        },\n        \"is_cdrom\": true,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"47b55015-c34f-4523-9c56-cdbe88157ac6\"\n            }\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"scsi\",\n            \"device_index\": 0\n        },\n        \"vm_disk_create\": {\n            \"storage_container_uuid\": \"abd27f49-1054-41ab-8d62-b216c0c0730d\",\n            \"size\": 10737418240\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 1\n        },\n        \"is_ cdrom\": true,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"faa349dc-f7a3-4132-8689-fa6b41f4f33d\"\n            }\n        }\n    }],\n    \" hypervisor_type\": \"ACROPOLIS\",\n    \"affinity\": null\n}"
+            },
+            "description": "Create VM"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "24da53bb-f459-74f0-9b88-914bad403396",
+      "name": "V2:StorageContainers",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "75edbe42-d43d-2d1b-5030-f964468b1444",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/storage_containers/",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get Containers"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
