@@ -206,7 +206,7 @@
     },
     {
       "_postman_id": "43bc8b8f-8f1c-d4a1-2450-6efde50c6585",
-      "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+      "name": "https://10.68.69.102:9440/api/nutanix/v2.0/images/",
       "request": {
         "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
         "method": "POST",
