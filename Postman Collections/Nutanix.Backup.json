@@ -205,6 +205,12 @@
       ]
     },
     {
+      "_postman_id": "2758a341-e563-3742-7f34-c50032ae980d",
+      "name": "VM Delpoy",
+      "description": "Delpoy from Image",
+      "item": []
+    },
+    {
       "_postman_id": "43bc8b8f-8f1c-d4a1-2450-6efde50c6585",
       "name": "https://10.68.69.102:9440/api/nutanix/v2.0/images/",
       "request": {
