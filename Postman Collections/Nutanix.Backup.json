@@ -208,6 +208,32 @@
             "description": "Create VM"
           },
           "response": []
+        },
+        {
+          "_postman_id": "3556dacf-e09c-5933-765f-b0ce6a09fcc1",
+          "name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/ copy",
+          "request": {
+            "url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/vms/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"CentOS\",\n    \"guest_os\": \"CentOS\",\n    \"memory_mb\": 2048,\n    \"name\": \"DevOps\",\n    \"num_cores_per_ vcpu\": 2,\n    \"num_vcpus\": 1,\n    \"vm_disks\": [{\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 0\n        },\n        \"is_cdrom\": false,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"fa4ea6fd-4b44-488a-8c5a-7eb320518b50\"\n            }\n        }\n    }, {\n        \"disk_address\": {\n            \"device_bus\": \"ide\",\n            \"device_index\": 1\n        },\n        \"is_ cdrom\": true,\n        \"is_empty\": false,\n        \"vm_disk_clone\": {\n            \"disk_address\": {\n                \"vmdisk_uuid\": \"faa349dc-f7a3-4132-8689-fa6b41f4f33d\"\n            }\n        }\n    }],\n    \" hypervisor_type\": \"ACROPOLIS\",\n    \"affinity\": null\n}"
+            },
+            "description": "Create VM"
+          },
+          "response": []
         }
       ]
     },
